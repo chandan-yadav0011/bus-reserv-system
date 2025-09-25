@@ -14,11 +14,10 @@ const BookingSchema = new mongoose.Schema({
         required: true
     },
 
-    totalSeats:{
-        type:Number,
-        required: true,
+    seatNumber:{
+        type: Number,
+        required: true
     },
-
     bookedSeats:{
         type:Number,
 
@@ -28,6 +27,8 @@ const BookingSchema = new mongoose.Schema({
         type: Number,
 
     },
+
+
 
     status:{
         type: String,

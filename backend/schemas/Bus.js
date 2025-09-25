@@ -31,11 +31,28 @@ const BusSchema = new mongoose.Schema({
         type: String,
         required:true
     },
-
+    
     date:{
         type: String,
         required:true
-    }
+    },
+    totalSeats:{
+        type: Number,
+        required: true,
+        default: 40
+    },
+    seats: [
+        {
+            seatNumber: {
+            type: Number,
+            required: true
+            },
+            isBooked: {
+            type: Boolean,
+            default: false
+            }
+        }
+        ]
 },
 {
     timestamps:true
